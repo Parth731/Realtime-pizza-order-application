@@ -1,21 +1,36 @@
 {
-  "name": "realtime-pizza",
-  "version": "1.0.0",
-  "description": "This is our realtime pizza application",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"nodemon server.js",
-    "start":"node server.js"
-  },
-  "author": "Parth Patel",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+      "name": "realtime-pizza",
+      "version": "1.0.0",
+      "description": "This is our realtime pizza application",
+      "main": "index.js",
+      "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "dev": "nodemon server.js",
+            "start": "node server.js",
+            "compile:sass": "node-sass resources/scss/app.scss public/CSS/app.css",
+            "development": "mix",
+            "watch": "mix watch",
+            "watch-poll": "mix watch -- --watch-options-poll=1000",
+            "hot": "mix watch --hot",
+            "production": "mix --production"
+      },
+      "author": "Parth Patel",
+      "license": "ISC",
+      "dependencies": {
+            "ejs": "^3.1.6",
+            "express": "^4.17.1",
+            "express-ejs-layouts": "^2.5.0"
+      },
+      "devDependencies": {
+            "autoprefixer": "^10.2.5",
+            "cross-env": "^7.0.3",
+            "laravel-mix": "^6.0.13",
+            "node-sass": "^5.0.0",
+            "nodemon": "^2.0.7",
+            "postcss": "^8.2.8",
+            "resolve-url-loader": "^3.1.2",
+            "sass": "^1.32.8",
+            "sass-loader": "^10.1.1",
+            "tailwindcss": "^2.0.4"
+      }
 }

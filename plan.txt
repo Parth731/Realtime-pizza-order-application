@@ -1,2 +1,48 @@
 
 jistani dependcy hoti hai ye node_module me download hoti hai
+
+/**********************************************************************/
+
+> how to laravel mix set in nodejs?
+
+-mkdir my-app && cd my-app
+-npm init
+-npm install laravel-mix --save-dev
+-add script in package.json
+
+ "scripts": {
+            "development": "mix",
+            "watch": "mix watch",
+            "watch-poll": "mix watch -- --watch-options-poll=1000",
+            "hot": "mix watch --hot",
+            "production": "mix --production"
+
+ }
+
+-create webpack.mix.js(in application project)
+
+ex of webpack.mix.js: 
+
+let mix = require('laravel-mix');
+
+// here setup scss and js 
+// mix.js(source,destion).sass(source,destion)
+
+mix.js('resources/js/app.js', 'public/js/app.js').sass(
+   'resources/scss/app.scss',
+   'public/CSS/app.css',
+);
+
+
+-write js and sass file 
+-npx mix (building)
+
+
+laravel auto reaload :npm run watch
+
+/*******************************************************************/
+
+telween text
+
+px-4 means left, right 4px padding
+py-6 means top,bottom 4px padding
