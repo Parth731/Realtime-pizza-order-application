@@ -38,7 +38,7 @@ mix.js('resources/js/app.js', 'public/js/app.js').sass(
 -npx mix (building)
 
 
-laravel auto reaload :npm run watch
+laravel mix auto reaload :npm run watch
 
 /*******************************************************************/
 
