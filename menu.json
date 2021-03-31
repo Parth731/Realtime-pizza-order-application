@@ -1,0 +1,117 @@
+[
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bea0"
+            },
+            "name": "Margherit",
+            "image": "Margherit.jpg",
+            "price": "100",
+            "size": "large"
+      },
+
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2beb1"
+            },
+            "name": "Farm House",
+            "image": "Margherit.jpg",
+            "price": "200",
+            "size": "medium"
+      },
+
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bec2"
+            },
+            "name": "Peppy Paneer",
+            "image": "Margherit.jpg",
+            "price": "250",
+            "size": "large"
+      },
+
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bed3"
+            },
+            "name": "Mexican Green Wave",
+            "image": "Margherit.jpg",
+            "price": "300",
+            "size": "medium"
+      },
+
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bee4"
+            },
+            "name": "Deluxe Veggie",
+            "image": "Margherit.jpg",
+            "price": "350",
+            "size": "large"
+      },
+
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bef5"
+            },
+            "name": "Veg Extravaganza",
+            "image": "Margherit.jpg",
+            "price": "400",
+            "size": "medium"
+      },
+
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2beg6"
+            },
+            "name": "Cheese N Corn",
+            "image": "Margherit.jpg",
+            "price": "450",
+            "size": "large"
+      },
+
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2beh7"
+            },
+            "name": "Paneer Makhani",
+            "image": "Margherit.jpg",
+            "price": "500",
+            "size": "medium"
+      },
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bei8"
+            },
+            "name": "Veggie Paradise",
+            "image": "Margherit.jpg",
+            "price": "300",
+            "size": "large"
+      },
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bej9"
+            },
+            "name": "Fresh Veggie",
+            "image": "Margherit.jpg",
+            "price": "350",
+            "size": "medium"
+      },
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bek0"
+            },
+            "name": "Indi Tandoori Paneer",
+            "image": "Margherit.jpg",
+            "price": "250",
+            "size": "large"
+      },
+      {
+            "_id": {
+                  "$oid": "5eee6717a27a66807cf2bel1"
+            },
+            "name": "Double Cheese Margherita",
+            "image": "Margherit.jpg",
+            "price": "150",
+            "size": "medium"
+      }
+]

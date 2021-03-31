@@ -46,3 +46,41 @@ telween text
 
 px-4 means left, right 4px padding
 py-6 means top,bottom 4px padding
+
+
+/***************************************************************/
+
+session and cookies
+
+app.use(session({
+   secret:  =>  cookies ko unscript karane keliye use hota hai aor ye application bahar dotenv me rakha jata hai
+}))
+
+koi user server ko request bejata hai to server me session id create hoti ve store hoti hai server ke file,ram(memory) ya database me. session id me id nodejs me alag aor php me alag hoto hai but uski value unike hoti hai. badme server respose karega user ko tab respose ke ander header hota hai aor header ke ander message hota hai ve message me session id hoga ve client me session create karega aor usame store kar dega. aor bad me dusari bar client request send karega tab server pata karata hai ye client konsa hai.
+
+
+jab tak hamara cookies validate hota hai tab tak session validate.
+cookies ka set time khatam ho jata tab hamara session bhi exprise ho jata hai
+
+example:
+connect.sid	s%3AP34wW3bhqsQo-fhAwjLznWUuJxKRRSWC.bMVIXATPlj0HW50MurAmQYVkEEiqdonwpm3nu%2BLtvf8	localhost	/	2021-04-01T06:15:00.838Z	93	✓			Medium	
+
+1:09:15 => part 6
+
+
+/*****************************************************************/
+
+connect-mongo error solution
+
+halo. i also found same problem but i downgraded the version of connect-mongo package from v4 to v3
+try unistalling connect mongo
+
+npm uninstall connect-mongo
+then install connect v3
+
+npm i connect-mongo@3
+
+
+/******************************************/
+
+again explain cartController and session
