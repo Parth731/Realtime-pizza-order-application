@@ -84,3 +84,6 @@ npm i connect-mongo@3
 /******************************************/
 
 again explain cartController and session
+
+
+data-pizza="<%= JSON.stringify(pizza) %>"

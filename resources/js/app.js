@@ -4,14 +4,14 @@ import Noty from "noty";
 let addToCart = document.querySelectorAll(".add-to-cart");
 let cartCounter = document.querySelector("#cartCounter");
 
-// let selection = document.querySelector("#list");
-// let result = document.querySelector(".price");
+let list = document.querySelectorAll(".list");
+let mylist = document.querySelectorAll("select[name=select]");
 
 function updateCart(pizza) {
   axios
     .post("/update-cart", pizza)
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       cartCounter.innerText = res.data.totalQty;
       new Noty({
         type: "success",
@@ -36,11 +36,8 @@ addToCart.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     let pizza = btn.dataset.pizza; // get data on btn click and receive data from database using json.stringify()
     let pizzaData = JSON.parse(pizza);
+    console.log(pizzaData);
 
     updateCart(pizzaData);
   });
 });
-
-// selection.addEventListener("change", () => {
-//   result.innerText = selection.options[selection.selectedIndex].text;
-// });

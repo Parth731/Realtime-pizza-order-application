@@ -1,0 +1,253 @@
+[
+  {
+    "name": "Margherit",
+    "image": "Margherit.jpg",
+    "price": 80,
+    "size": "regular"
+  },
+
+  {
+    "name": "Margherit",
+    "image": "Margherit.jpg",
+    "price": 150,
+    "size": "medium"
+  },
+
+  {
+    "name": "Margherit",
+    "image": "Margherit.jpg",
+    "price": 300,
+    "size": "large"
+  },
+
+  {
+    "name": "Farm House",
+    "image": "Farmhouse.jpg",
+    "price": 85,
+    "size": "regular"
+  },
+
+  {
+    "name": "Farm House",
+    "image": "Farmhouse.jpg",
+    "price": 155,
+    "size": "medium"
+  },
+
+  {
+    "name": "Farm House",
+    "image": "Farmhouse.jpg",
+    "price": 320,
+    "size": "large"
+  },
+
+  {
+    "name": "Peppy Paneer",
+    "image": "Peppy_Paneer.jpg",
+    "price": 90,
+    "size": "regular"
+  },
+
+  {
+    "name": "Peppy Paneer",
+    "image": "Peppy_Paneer.jpg",
+    "price": 160,
+    "size": "medium"
+  },
+
+  {
+    "name": "Peppy Paneer",
+    "image": "Peppy_Paneer.jpg",
+    "price": 330,
+    "size": "large"
+  },
+
+  {
+    "name": "Mexican Green Wave",
+    "image": "Mexican_Green_Wave.jpg",
+    "price": 95,
+    "size": "regular"
+  },
+
+  {
+    "name": "Mexican Green Wave",
+    "image": "Mexican_Green_Wave.jpg",
+    "price": 165,
+    "size": "medium"
+  },
+
+  {
+    "name": "Mexican Green Wave",
+    "image": "Mexican_Green_Wave.jpg",
+    "price": 340,
+    "size": "large"
+  },
+
+  {
+    "name": "Deluxe Veggie",
+    "image": "Deluxe_Veggie.jpg",
+    "price": 100,
+    "size": "regular"
+  },
+
+  {
+    "name": "Deluxe Veggie",
+    "image": "Deluxe_Veggie.jpg",
+    "price": 175,
+    "size": "medium"
+  },
+
+  {
+    "name": "Deluxe Veggie",
+    "image": "Deluxe_Veggie.jpg",
+    "price": 350,
+    "size": "large"
+  },
+
+  {
+    "name": "Veg Extravaganza",
+    "image": "Veg_Extravaganz.jpg",
+    "price": 105,
+    "size": "regular"
+  },
+
+  {
+    "name": "Veg Extravaganza",
+    "image": "Veg_Extravaganz.jpg",
+    "price": 180,
+    "size": "medium"
+  },
+
+  {
+    "name": "Veg Extravaganza",
+    "image": "Veg_Extravaganz.jpg",
+    "price": 360,
+    "size": "large"
+  },
+
+  {
+    "name": "Cheese N Corn",
+    "image": "Corn_&_Cheese.jpg",
+    "price": 110,
+    "size": "regular"
+  },
+
+  {
+    "name": "Cheese N Corn",
+    "image": "Corn_&_Cheese.jpg",
+    "price": 185,
+    "size": "medium"
+  },
+
+  {
+    "name": "Cheese N Corn",
+    "image": "Corn_&_Cheese.jpg",
+    "price": 370,
+    "size": "large"
+  },
+
+  {
+    "name": "Paneer Makhani",
+    "image": "Paneer_Makhni.jpg",
+    "price": 120,
+    "size": "regular"
+  },
+
+  {
+    "name": "Paneer Makhani",
+    "image": "Paneer_Makhni.jpg",
+    "price": 195,
+    "size": "medium"
+  },
+
+  {
+    "name": "Paneer Makhani",
+    "image": "Paneer_Makhni.jpg",
+    "price": 385,
+    "size": "large"
+  },
+
+  {
+    "name": "Veggie Paradise",
+    "image": "Veggie_Paradise.jpg",
+    "price": 130,
+    "size": "regular"
+  },
+
+  {
+    "name": "Veggie Paradise",
+    "image": "Veggie_Paradise.jpg",
+    "price": 205,
+    "size": "medium"
+  },
+
+  {
+    "name": "Veggie Paradise",
+    "image": "Veggie_Paradise.jpg",
+    "price": 400,
+    "size": "large"
+  },
+
+  {
+    "name": "Fresh Veggie",
+    "image": "Fresh_Veggie.jpg",
+    "price": 140,
+    "size": "regular"
+  },
+
+  {
+    "name": "Fresh Veggie",
+    "image": "Fresh_Veggie.jpg",
+    "price": 215,
+    "size": "medium"
+  },
+
+  {
+    "name": "Fresh Veggie",
+    "image": "Fresh_Veggie.jpg",
+    "price": 415,
+    "size": "large"
+  },
+
+  {
+    "name": "Indian Tandoori Paneer",
+    "image": "IndianTandooriPaneer.jpg",
+    "price": 150,
+    "size": "regular"
+  },
+
+  {
+    "name": "Indian Tandoori Paneer",
+    "image": "IndianTandooriPaneer.jpg",
+    "price": 250,
+    "size": "medium"
+  },
+
+  {
+    "name": "Indian Tandoori Paneer",
+    "image": "IndianTandooriPaneer.jpg",
+    "price": 450,
+    "size": "large"
+  },
+
+  {
+    "name": "Double Cheese Margherita",
+    "image": "Double_Cheese_Margherita.jpg",
+    "price": 175,
+    "size": "regular"
+  },
+
+  {
+    "name": "Double Cheese Margherita",
+    "image": "Double_Cheese_Margherita.jpg",
+    "price": 275,
+    "size": "medium"
+  },
+
+  {
+    "name": "Double Cheese Margherita",
+    "image": "Double_Cheese_Margherita.jpg",
+    "price": 475,
+    "size": "large"
+  }
+]

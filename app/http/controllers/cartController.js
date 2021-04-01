@@ -4,7 +4,7 @@ function cartController() {
       res.render("customers/cart");
     },
     update(req, res) {
-      console.log("update..........");
+      // console.log("update..........");
 
       // let cart = {
       //   items: {
@@ -26,6 +26,7 @@ function cartController() {
       // console.log(req.body);           // jis pizza par click kiya usaka data
       // console.log(req.session.cart);   // {}
       let cart = req.session.cart;
+      console.log("cart - items => ", cart.items);
 
       // check if items does not exist in cart then add it and exist pizza qty and price change
       if (!cart.items[req.body._id]) {

@@ -1849,12 +1849,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var addToCart = document.querySelectorAll(".add-to-cart");
-var cartCounter = document.querySelector("#cartCounter"); // let selection = document.querySelector("#list");
-// let result = document.querySelector(".price");
+var cartCounter = document.querySelector("#cartCounter");
+var list = document.querySelectorAll(".list");
+var mylist = document.querySelectorAll("select[name=select]");
 
 function updateCart(pizza) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post("/update-cart", pizza).then(function (res) {
-    console.log(res);
+    // console.log(res);
     cartCounter.innerText = res.data.totalQty;
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
       type: "success",
@@ -1881,11 +1882,10 @@ addToCart.forEach(function (btn) {
     var pizza = btn.dataset.pizza; // get data on btn click and receive data from database using json.stringify()
 
     var pizzaData = JSON.parse(pizza);
+    console.log(pizzaData);
     updateCart(pizzaData);
   });
-}); // selection.addEventListener("change", () => {
-//   result.innerText = selection.options[selection.selectedIndex].text;
-// });
+});
 
 /***/ }),
 
