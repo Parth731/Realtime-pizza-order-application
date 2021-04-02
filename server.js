@@ -9,9 +9,10 @@ const view_path = path.join(__dirname, "./resources/views");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("express-flash");
-const MongoDbStore = require("connect-mongo")(session);
+const passport = require("passport");
 
 // MongoDbStore(session);
+const MongoDbStore = require("connect-mongo")(session);
 
 // database connection
 const url = "mongodb://localhost/pizza";
@@ -48,16 +49,26 @@ app.use(
   })
 );
 
+// passport config
+const passportInit = require("./app/config/passport");
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
+
 // flash set
 app.use(flash());
 
 // Assets
 app.use(express.static("public"));
+
+// jab koi data hamare pass aata hai tab different form me hota hai jese ki json,urlencoded aor usko unable karane keliye following line use karani hai
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // global middleware
 app.use((req, res, next) => {
   res.locals.session = req.session;
+  res.locals.user = req.user;
   next();
 });
 
