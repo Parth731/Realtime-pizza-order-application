@@ -11,7 +11,6 @@ function init(passport) {
       async (email, password, done) => {
         // login logic
 
-        console.log(email, password);
         // check email address exist or not
         const user = await User.findOne({ email: email });
         if (!user) {
@@ -20,7 +19,7 @@ function init(passport) {
           });
         }
 
-        console.log("user -> ", user);
+        
 
         //   here check user password and database password match
         bcrypt

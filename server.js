@@ -6,6 +6,7 @@ const ejs = require("ejs");
 const path = require("path");
 const port = process.env.PORT || 8000;
 const view_path = path.join(__dirname, "./resources/views");
+const expressLayout = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("express-flash");
@@ -73,6 +74,7 @@ app.use((req, res, next) => {
 });
 
 /* set the template engine */
+app.use(expressLayout);
 app.set("view engine", "ejs");
 app.set("views", view_path);
 

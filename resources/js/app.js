@@ -1,14 +1,14 @@
 import axios from "axios";
 import Noty from "noty";
+// const moment = require("moment");
+
+import { initAdmin } from "./admin";
 
 let addToCart = document.querySelectorAll(".add-to-cart");
 let cartCounter = document.querySelector("#cartCounter");
 
-let list = document.querySelectorAll(".list");
-let mylist = document.querySelectorAll("select[name=select]");
-
 function updateCart(pizza) {
-  axios
+  axios 
     .post("/update-cart", pizza)
     .then((res) => {
       // console.log(res);
@@ -36,8 +36,23 @@ addToCart.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     let pizza = btn.dataset.pizza; // get data on btn click and receive data from database using json.stringify()
     let pizzaData = JSON.parse(pizza);
-    console.log(pizzaData);
+
 
     updateCart(pizzaData);
   });
 });
+
+// remove alert message after x seconds
+
+const alertMsg = document.querySelector("#success-alert");
+if (alertMsg) {
+  setTimeout(() => {
+    alertMsg.remove();
+  }, 3000);
+}
+
+/************************* */
+
+
+
+initAdmin();
