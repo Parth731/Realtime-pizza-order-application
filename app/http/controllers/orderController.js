@@ -23,6 +23,11 @@ function orderController() {
         .then((result) => {
           req.flash("success", "Order placed successfully");
           delete req.session.cart;
+
+          // get eventEmitter event then listening to server.js
+          const eventEmitter = req.app.get("eventEmitter");
+          eventEmitter.emit("orderPlaced", result);
+
           return res.redirect("/customer/orders");
         })
         .catch((err) => {
@@ -44,6 +49,22 @@ function orderController() {
         orders: orders,
         moment: moment,
       });
+    },
+    async show(req, res) {
+      // all orders receive using user ID
+      // req.param.id => it is parameter id
+      const order = await Order.findById(req.params.__id);
+
+      // authorize user id
+      // jo id par order fetch kar rahe hai user ki hai ya nai
+      // req.user._id -> data is object form so converted in string
+      if (req.user._id.toString() === order.customerId.toString()) {
+        return res.render("customers/singleOrder", {
+          singleorder: order,
+        });
+      } else {
+        return res.redirect("/");
+      }
     },
   };
 }

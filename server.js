@@ -11,6 +11,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("express-flash");
 const passport = require("passport");
+const Emitter = require("events");
 
 // MongoDbStore(session);
 const MongoDbStore = require("connect-mongo")(session);
@@ -38,6 +39,12 @@ let mongoStore = new MongoDbStore({
   mongooseConnection: connection,
   collection: "sessions",
 });
+
+// event emitter
+// create emitter
+const eventEmitter = new Emitter();
+// eventEmitter use any place in entire projects
+app.set("eventEmitter", eventEmitter);
 
 // express session setting and config
 app.use(
@@ -80,6 +87,28 @@ app.set("views", view_path);
 
 require("./routes/web")(app);
 
-app.listen(port, (e) => {
+const server = app.listen(port, (e) => {
   console.log(`listning on port ${port}`);
+});
+
+// socket.io
+const io = require("socket.io")(server);
+io.on("connection", (socket) => {
+  // join client
+  // create room perticular order id
+  // receiving join event
+  socket.on("join", (orderId) => {
+    // socket join inbuild method
+    socket.join(orderId);
+  });
+});
+
+eventEmitter.on("orderUpdated", (data) => {
+  //  receiving orderid from statusController.js and sending data to app.js
+  io.to(`order_${data.id}`).emit("orderUpdated", data);
+});
+
+// receiving orderplaced emit from controller/orderController.js and send to the admin.js
+eventEmitter.on("orderPlaced", (data) => {
+  io.to("adminRoom").emit("orderPlaced", data);
 });

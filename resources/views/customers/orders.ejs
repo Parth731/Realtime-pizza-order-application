@@ -33,7 +33,9 @@
         <% if(orders.length) { %> <% orders.forEach((currentOrder) => { %>
         <tr>
           <td class="border px-4 py-2">
-            <a class="link" href="/"> <%= currentOrder._id %> </a>
+            <a class="link" href="/customer/orders/<%=currentOrder._id%>">
+              <%= currentOrder._id %>
+            </a>
           </td>
           <td class="border px-4 py-2"><%= currentOrder.phone %></td>
           <td class="border px-4 py-2"><%= currentOrder.address %></td>

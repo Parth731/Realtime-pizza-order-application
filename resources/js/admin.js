@@ -1,20 +1,19 @@
 import axios from "axios";
 import moment from "moment";
+import Noty from "noty";
 
-function initAdmin() {
-
-    const orderTableBody = document.querySelector("#orderTableBody");
+export function initAdmin(socket) {
+  const orderTableBody = document.querySelector("#orderTableBody");
   console.log(orderTableBody);
   let orders = [];
   let markup;
 
   return axios
-      .get("/admin/orders", {
-        
-        // here sending ajax request
-        headers: {
-            "X-Requested-With":"XMLHttpRequest"
-        }
+    .get("/admin/orders", {
+      // here sending ajax request
+      headers: {
+        "X-Requested-With": "XMLHttpRequest",
+      },
     })
     .then((res) => {
       orders = res.data;
@@ -37,10 +36,9 @@ function initAdmin() {
   }
 
   function generateMarkup(orders) {
-    console.log("get => ", orders);
+    socket_func();
     return orders
       .map((order) => {
-        console.log("ordersssssssss => ", order.customerId.name);
         return `
                <tr>
                 <td class="border px-4 py-2 text-green-900">
@@ -51,6 +49,8 @@ function initAdmin() {
                 <td class="border px-4 py-2">${order.address}</td>
                 <td class="border px-4 py-2">
                     <div class="inline-block relative w-64">
+
+                        <!-- admin orders status -->
                         <form action="/admin/order/status" method="POST">
                             <input type="hidden" name="orderId" value="${
                               order._id
@@ -103,6 +103,21 @@ function initAdmin() {
       .join("");
   }
 
-}
+  function socket_func() {
+    // jo koi customer order placed karata hai tab emit karana hai
+    // orderplace event emit(order) from server.js(data)
 
-export { initAdmin };
+    socket.on("orderPlaced", (order) => {
+      new Noty({
+        type: "success",
+        timeout: 1000, //1sec
+        text: "New Order successfully",
+        progressBar: false,
+      }).show();
+      orders.unshift(order);
+      orderTableBody.innerHTML = "";
+      // new orders added
+      orderTableBody.innerHTML = generateMarkup(orders);
+    });
+  }
+}
